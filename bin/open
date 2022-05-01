@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+require("dotenv").config();
+const openUrl = require("open");
+
+const PORT = process.env.PORT || 3000;
+
+//open localhost:PORT only once
+openUrl(`http://localhost:${PORT}`,{
+    newInstance:false,
+});
+
